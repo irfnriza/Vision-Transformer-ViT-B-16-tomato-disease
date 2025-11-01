@@ -1,0 +1,83 @@
+============================================================
+Vision Transformer (ViT) - Tomato Disease Classification
+============================================================
+
+DATASET INFORMATION
+------------------------------------------------------------
+Total images: 6554
+Classes: 3
+  0: Tomato_healthy
+  1: Tomato_Late_blight
+  2: Tomato__Tomato_YellowLeaf__Curl_Virus
+
+Train set: 4587 images
+Val set:   983 images
+Test set:  984 images
+
+MODEL CONFIGURATION
+------------------------------------------------------------
+Architecture: ViT-B/16
+Pretrained: ImageNet-1K
+Input size: 224x224
+Batch size: 32
+Learning rate: 0.0001
+Weight decay: 0.0001
+Optimizer: AdamW
+Scheduler: CosineAnnealingLR
+Max epochs: 100
+Early stopping patience: 10
+
+TRAINING RESULTS
+------------------------------------------------------------
+Training completed in 45.93 minutes
+Best epoch: 6
+Best validation accuracy: 100.00%
+Best validation loss: 0.0001
+
+TEST SET EVALUATION
+============================================================
+Overall Accuracy: 100.00%
+
+Macro Average:
+  Precision: 1.0000
+  Recall:    1.0000
+  F1-Score:  1.0000
+
+Per-Class Metrics:
+------------------------------------------------------------
+
+Class 0: Tomato_healthy
+  Precision: 1.0000
+  Recall:    1.0000
+  F1-Score:  1.0000
+  Support:   238
+
+Class 1: Tomato_Late_blight
+  Precision: 1.0000
+  Recall:    1.0000
+  F1-Score:  1.0000
+  Support:   264
+
+Class 2: Tomato__Tomato_YellowLeaf__Curl_Virus
+  Precision: 1.0000
+  Recall:    1.0000
+  F1-Score:  1.0000
+  Support:   482
+
+Confusion Matrix:
+------------------------------------------------------------
+[[238   0   0]
+ [  0 264   0]
+ [  0   0 482]]
+
+Classification Report:
+------------------------------------------------------------
+                        precision    recall  f1-score   support
+
+               healthy       1.00      1.00      1.00       238
+           Late_blight       1.00      1.00      1.00       264
+YellowLeaf__Curl_Virus       1.00      1.00      1.00       482
+
+              accuracy                           1.00       984
+             macro avg       1.00      1.00      1.00       984
+          weighted avg       1.00      1.00      1.00       984
